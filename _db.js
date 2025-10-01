@@ -26,5 +26,12 @@ let reviews = [
     {id: '2', rating: 4, content: 'Great game with a few minor issues.'},
     {id: '3', rating: 3, content: 'Good game but could be better.'},
     {id: '4', rating: 2, content: 'Not my cup of tea, found it boring.'},
-    {id: '5', rating: 1, content: 'Terrible game, do not waste your money.'}
+    {id: '5', rating: 1, content: 'Terrible game, do not waste your money.'},
+    {id: '6', rating: 5, content: 'An instant classic! Loved every moment.'},
+    {id: '7', rating: 4, content: 'Very enjoyable with stunning visuals.'},
+    {id: '8', rating: 3, content: 'Average experience, nothing special.'},
+    {id: '9', rating: 2, content: 'Disappointing, expected much more.'},
+    {id: '10', rating: 1, content: 'Worst game I have ever played.'}
 ]
+
+export const db = {games, authors, reviews};
