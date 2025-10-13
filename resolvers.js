@@ -34,6 +34,39 @@ export const resolvers = {
     games(parent) {
         return db.games.filter((game) => parent.games.includes(game.id));
     }
-}
+},
+    Mutation: {
+        deleteGame(_, args) {
+        let game = db.games.find((g)=> g.id === args.id)
+        let index = db.games.indexOf(game)
+        if(game){
+            db.games.splice(index, 1)
+        }
+        return db.games
+        },
+        addGame(_, args) {
+            // console.log("args", args)
+            let game = {
+                ...args.game,
+                id: Math.floor(Math.random() * 10000).toString()
+            }
+            db.games.push({
+                game
+            });
+        return game;
+    },
+    updateGame(_, args) {
+        db.games = db.games.map((game) => {
+            if(game.id === args.id){
+                return {
+                    ...game,
+                    ...args.edits
+                }
+            }
+            return game;
+        });
+        return db.games.find((game) => game.id === args.id);
+    }
 
+}
 }

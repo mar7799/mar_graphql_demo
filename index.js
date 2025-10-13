@@ -3,9 +3,6 @@ import { startStandaloneServer } from "@apollo/server/standalone";
 import { typeDefs } from "./schema.js";
 import { resolvers } from "./resolvers.js";
 
-console.log("TypeDefs:", typeDefs);
-console.log("Resolvers:", resolvers);
-
 async function startServer() {
   try {
     const server = new ApolloServer({

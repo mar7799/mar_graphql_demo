@@ -19,18 +19,23 @@ Reviews: to fetch a list of review.
 
 You can also write a nested queries:
 
-Game{
-reviews{
-
-    }
-
-}
-Author{
-reviews{
-
-    },
-    games{
-
-    }
+Game
+{
+reviews
+{
 
 }
+}
+Author
+{
+reviews
+{
+
+},
+games
+{
+
+}
+}
+
+Note: you can choose to ignore the data in the query if its in the schema but, not the other way around.
